@@ -1,9 +1,14 @@
 # min-caml-dev-image
 
-min-caml 動作確認用の環境を提供する Docker イメージ。
+min-caml のビルド環境を提供する Docker イメージ。
 
 * min-caml
   * https://github.com/esumii/min-caml
+
+
+公式の min-caml は 32 ビットアプリケーションとしてビルドされるが、最近の Linux/WSL/macOS では 32 ビット環境がサポートされていないため、公式 min-caml をビルドすることができない。
+
+なので、Docker を使って min-caml をビルドできるようにした。
 
 ## 使い方
 
