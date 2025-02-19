@@ -10,6 +10,9 @@ min-caml 動作確認用の環境を提供する Docker イメージ。
 ### Docker イメージのビルド
 
 ```sh
+$ cd src
+$ git clone https://github.com/thata/min-caml-dev-image.git
+$ cd min-caml-dev-image/
 $ docker build -t min-caml-dev .
 ```
 
@@ -20,11 +23,11 @@ min-caml のソースファイルを取得し、コンテナを起動。
 ```sh
 $ cd ~/src
 $ git clone https://github.com/esumii/min-caml.git
-$ cd min-caml
+$ cd min-caml/
 $ docker run -it --rm -v `pwd`:/app min-caml-dev bash
 ```
 
-コンテナ内で min-caml をビルド。
+コンテナ内で min-caml をビルド。min-caml コマンドのヘルプが表示されれば成功。
 
 ```sh
 $ ./to_x86
@@ -54,10 +57,16 @@ sp = 0x3ff0b560, hp = 0x3f157010
 レイトレーサー `min-rt` をビルドして実行。
 
 ```
-$ cd min-rt
+$ cd min-rt/
 $ make contest.mincaml.ppm
 ```
 
 レイトレーシング結果の画像ファイル `contest.mincaml.ppm` が生成される。
 
 ![contest.mincaml.ppm](contest.png)
+
+macOSなら、以下のコマンドで画像をプレビュー.appで表示できる。
+
+```
+$ open min-rt/contest.mincaml.ppm
+```
