@@ -1,6 +1,6 @@
 # min-caml-dev-image
 
-min-caml 動作確認用の環境を提供する Docker イメージです。
+min-caml 動作確認用の環境を提供する Docker イメージ。
 
 ## 使い方
 
