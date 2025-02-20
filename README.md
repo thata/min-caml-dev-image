@@ -5,6 +5,8 @@ min-caml のビルド環境を提供する Docker イメージ。
 * min-caml
   * https://github.com/esumii/min-caml
 
+## 説明
+
 min-caml 環境を構築しようとすると以下の罠にハマりがち。
 
 * OCaml のバージョンが5系の場合、min-caml の修正が必要
