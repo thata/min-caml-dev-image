@@ -5,10 +5,13 @@ min-caml のビルド環境を提供する Docker イメージ。
 * min-caml
   * https://github.com/esumii/min-caml
 
+min-caml 環境を構築しようとすると以下の罠にハマりがち。
 
-公式の min-caml は 32 ビットアプリケーションとしてビルドされるため、最近の Linux/WSL/macOS では 32 ビット環境がサポートされていないため、公式 min-caml をビルドすることができない。
+* OCaml のバージョンが5系の場合、min-caml の修正が必要
+* Ubuntu は32ビットモードをサポートしていないため、min-caml が出力する32ビット x86 アセンブリコードをビルドできない
+* Apple シリコン搭載の Mac では、そもそも x86 のコードをビルドできない
 
-なので、Docker を使って min-caml をビルドできるようにした。
+そのため、32 ビットモードをサポートする Debian 上に OCaml 4 系の環境を構築した Docker イメージを用意し、その上で min-caml をビルドできるようにした。
 
 ## 使い方
 
